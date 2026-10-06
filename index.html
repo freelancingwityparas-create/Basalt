@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basalt Culinary Journey — 100% Vegetarian Fine Dining · Pune</title>
+<meta name="description" content="Basalt Culinary Journey — a 100% pure vegetarian multi-cuisine fine-dining restaurant in Pune. Marathi flavours, global cuisine, weddings, events & premium catering.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23B08D57'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='36' fill='%23FAF6EF' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ivory:     '#FAF6EF',
+        cream:     '#F4EDDF',
+        champagne: '#EDE3D0',
+        gold:      '#B08D57',
+        golddeep:  '#96753F',
+        goldlight: '#C9A96F',
+        stone:     '#6E675C',
+        stonelight:'#A39B8E',
+        ink:       '#2E2A24'
+      },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"','Georgia','serif'],
+        sans:  ['Jost','system-ui','sans-serif']
+      },
+      boxShadow: {
+        soft: '0 20px 60px -20px rgba(46,42,36,0.15)',
+        card: '0 10px 40px -12px rgba(46,42,36,0.12)',
+        lift: '0 24px 70px -18px rgba(46,42,36,0.22)'
+      }
+    }
+  }
+}
+</script>
+
+<style>
+/* ============ BASE ============ */
+html { -webkit-font-smoothing: antialiased; }
+body { background:#FAF6EF; color:#2E2A24; font-family:'Jost',sans-serif; overflow-x:hidden; }
+::selection { background:#B08D57; color:#FAF6EF; }
+::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-track { background:#F4EDDF; }
+::-webkit-scrollbar-thumb { background:#C9A96F; border-radius:8px; border:2px solid #F4EDDF; }
+img { user-select:none; }
+
+/* subtle film grain */
+.grain {
+  position:fixed; inset:0; z-index:5; pointer-events:none; opacity:.035; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ TYPO HELPERS ============ */
+.eyebrow { display:inline-flex; align-items:center; gap:.9rem; text-transform:uppercase; letter-spacing:.32em; font-size:.68rem; font-weight:500; color:#B08D57; }
+.eyebrow::before { content:''; width:2.4rem; height:1px; background:#B08D57; }
+.serif-i { font-family:'Cormorant Garamond',serif; font-style:italic; }
+
+/* ============ BUTTONS ============ */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; border-radius:999px; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; font-weight:500; padding:1.05rem 2.1rem; transition:all .45s cubic-bezier(.22,1,.36,1); cursor:pointer; white-space:nowrap; }
+.btn-gold { background:#B08D57; color:#FAF6EF; box-shadow:0 12px 30px -10px rgba(176,141,87,.55); }
+.btn-gold:hover { background:#96753F; transform:translateY(-2px); box-shadow:0 18px 38px -10px rgba(150,117,63,.6); }
+.btn-outline { border:1px solid #C9A96F; color:#6E675C; background:transparent; }
+.btn-outline:hover { background:#B08D57; border-color:#B08D57; color:#FAF6EF; transform:translateY(-2px); }
+.btn-ink { background:#2E2A24; color:#FAF6EF; }
+.btn-ink:hover { background:#B08D57; transform:translateY(-2px); }
+
+/* ============ NAV ============ */
+#nav { transition:all .5s cubic-bezier(.22,1,.36,1); }
+#nav.scrolled { background:rgba(250,246,239,.88); backdrop-filter:blur(16px); box-shadow:0 8px 40px -18px rgba(46,42,36,.18); }
+.nav-link { position:relative; font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:#6E675C; transition:color .3s; padding:.4rem 0; }
+.nav-link::after { content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:#B08D57; transition:width .4s cubic-bezier(.22,1,.36,1); }
+.nav-link:hover { color:#2E2A24; } .nav-link:hover::after { width:100%; }
+
+/* ============ MARQUEE ============ */
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
+.marquee-track:hover { animation-play-state:paused; }
+
+/* ============ ROTATING BADGE ============ */
+@keyframes spinSlow { to { transform:rotate(360deg);} }
+.animate-spin-slow { animation:spinSlow 20s linear infinite; }
+
+/* ============ IMAGE ZOOM ============ */
+.img-zoom { overflow:hidden; }
+.img-zoom img { transition:transform 1.1s cubic-bezier(.22,1,.36,1), filter .8s; }
+.img-zoom:hover img { transform:scale(1.07); }
+
+/* ============ CARDS ============ */
+.lift-card { transition:transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s; }
+.lift-card:hover { transform:translateY(-8px); box-shadow:0 28px 70px -20px rgba(46,42,36,.22); }
+
+/* ============ MENU TABS ============ */
+.menu-tab { padding:.65rem 1.4rem; border-radius:999px; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:#6E675C; border:1px solid transparent; transition:all .35s; cursor:pointer; white-space:nowrap; }
+.menu-tab:hover { color:#2E2A24; border-color:#C9A96F; }
+.menu-tab.active { background:#B08D57; color:#FAF6EF; box-shadow:0 10px 24px -8px rgba(176,141,87,.5); }
+#menuItems { transition:opacity .3s, transform .3s; }
+#menuItems.fading { opacity:0; transform:translateY(10px); }
+
+/* ============ DAYPART TABS ============ */
+.dp-tab { transition:all .4s; cursor:pointer; }
+.dp-tab .dp-dot { transition:all .4s; }
+.dp-tab.active .dp-dot { background:#B08D57; width:2.2rem; }
+.dp-tab.active .dp-name { color:#2E2A24; }
+
+/* ============ MODALS ============ */
+.modal { position:fixed; inset:0; z-index:120; display:flex; align-items:flex-start; justify-content:center; padding:1.2rem; overflow-y:auto; }
+.modal-backdrop { position:fixed; inset:0; background:rgba(46,42,36,.45); backdrop-filter:blur(6px); animation:fadeIn .35s; }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes modalIn { from{opacity:0; transform:translateY(30px) scale(.985);} to{opacity:1; transform:none;} }
+.modal-card { animation:modalIn .5s cubic-bezier(.22,1,.36,1); }
+.field { width:100%; background:#fff; border:1px solid #EDE3D0; border-radius:.85rem; padding:.85rem 1.05rem; font-size:.92rem; color:#2E2A24; outline:none; transition:border-color .3s, box-shadow .3s; font-family:'Jost',sans-serif; }
+.field:focus { border-color:#B08D57; box-shadow:0 0 0 3px rgba(176,141,87,.15); }
+.field.err { border-color:#C0554A; box-shadow:0 0 0 3px rgba(192,85,74,.12); }
+.flabel { display:block; font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:#6E675C; margin-bottom:.45rem; font-weight:500; }
+.ferr { font-size:.72rem; color:#C0554A; margin-top:.35rem; display:none; }
+.spinner { width:16px; height:16px; border:2px solid rgba(250,246,239,.35); border-top-color:#FAF6EF; border-radius:50%; animation:spin .7s linear infinite; }
+@keyframes spin { to{transform:rotate(360deg)} }
+
+/* success check draw */
+.check-circle { stroke-dasharray:166; stroke-dashoffset:166; animation:draw .7s cubic-bezier(.65,0,.45,1) forwards; }
+.check-mark { stroke-dasharray:48; stroke-dashoffset:48; animation:draw .45s .55s cubic-bezier(.65,0,.45,1) forwards; }
+@keyframes draw { to{stroke-dashoffset:0} }
+
+/* ============ LIGHTBOX ============ */
+#lightbox { transition:opacity .35s; }
+.lb-btn { width:3rem; height:3rem; border-radius:999px; background:rgba(250,246,239,.9); display:flex; align-items:center; justify-content:center; transition:all .3s; box-shadow:0 8px 24px -8px rgba(46,42,36,.3); }
+.lb-btn:hover { background:#B08D57; color:#FAF6EF; }
+
+/* ============ REVIEWS ============ */
+.review-slide { position:absolute; inset:0; opacity:0; transition:opacity .8s cubic-bezier(.22,1,.36,1); pointer-events:none; }
+.review-slide.active { opacity:1; pointer-events:auto; }
+.review-dot { width:.55rem; height:.55rem; border-radius:999px; background:#D9CDB4; transition:all .4s; cursor:pointer; }
+.review-dot.active { width:1.8rem; background:#B08D57; }
+
+/* ============ FLOATING BTNS ============ */
+@keyframes pulseRing { 0%{box-shadow:0 0 0 0 rgba(176,141,87,.35);} 70%{box-shadow:0 0 0 16px rgba(176,141,87,0);} 100%{box-shadow:0 0 0 0 rgba(176,141,87,0);} }
+.pulse-gold { animation:pulseRing 2.6s infinite; }
+.float-btn { position:relative; width:3.4rem; height:3.4rem; border-radius:999px; display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 14px 34px -10px rgba(46,42,36,.4); transition:transform .35s; }
+.float-btn:hover { transform:translateY(-3px) scale(1.05); }
+.float-tip { position:absolute; right:calc(100% + .8rem); top:50%; transform:translateY(-50%); background:#2E2A24; color:#FAF6EF; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; padding:.5rem .9rem; border-radius:.6rem; white-space:nowrap; opacity:0; pointer-events:none; transition:all .3s; }
+.float-btn:hover .float-tip { opacity:1; transform:translateY(-50%) translateX(-4px); }
+
+/* ============ GALLERY ============ */
+.g-item { position:relative; overflow:hidden; border-radius:1.2rem; cursor:zoom-in; break-inside:avoid; margin-bottom:1.1rem; }
+.g-item img { transition:transform 1s cubic-bezier(.22,1,.36,1); width:100%; display:block; }
+.g-item:hover img { transform:scale(1.06); }
+.g-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(46,42,36,.45), transparent 55%); opacity:0; transition:opacity .5s; display:flex; align-items:flex-end; padding:1.1rem; }
+.g-item:hover .g-overlay { opacity:1; }
+
+/* ============ INSTAGRAM ============ */
+.ig-item { position:relative; overflow:hidden; border-radius:1rem; }
+.ig-item img { transition:transform .9s cubic-bezier(.22,1,.36,1); }
+.ig-item:hover img { transform:scale(1.08); }
+.ig-overlay { position:absolute; inset:0; background:rgba(46,42,36,.5); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .45s; }
+.ig-item:hover .ig-overlay { opacity:1; }
+
+/* ============ PRELOADER ============ */
+#preloader { position:fixed; inset:0; z-index:200; background:#FAF6EF; display:flex; flex-direction:column; align-items:center; justify-content:center; transition:transform .9s cubic-bezier(.76,0,.24,1), opacity .6s; }
+#preloader.done { transform:translateY(-100%); opacity:.98; pointer-events:none; }
+.pre-line { width:0; height:1px; background:#B08D57; transition:width 1.1s cubic-bezier(.22,1,.36,1) .2s; }
+#preloader.done .pre-line { width:0 !important; }
+
+/* ============ MISC ============ */
+.divider-gold { width:3.2rem; height:1px; background:linear-gradient(to right,#B08D57,#C9A96F); }
+.map-frame { filter:grayscale(.15) sepia(.06); }
+input[type="date"]::-webkit-calendar-picker-indicator { opacity:.55; cursor:pointer; }
+select.field { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E675C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; }
+</style>
+</head>
+
+<body class="bg-ivory text-ink font-sans">
+
+<div class="grain"></div>
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div class="font-serif text-5xl md:text-6xl tracking-[.18em] text-ink">BASALT</div>
+  <div class="serif-i text-gold text-xl mt-2">Culinary Journey</div>
+  <div class="pre-line mt-8"></div>
+  <div class="text-[.65rem] tracking-[.4em] uppercase text-stone mt-5">Crafted Flavours · Curated Moments</div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header id="nav" class="fixed top-0 left-0 right-0 z-[90]">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+    <a href="#home" class="anchor flex flex-col leading-none">
+      <span class="font-serif text-2xl md:text-[1.7rem] tracking-[.14em] text-ink">BASALT</span>
+      <span class="text-[.55rem] tracking-[.42em] uppercase text-gold mt-[2px]">Culinary Journey</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#story" class="anchor nav-link">Story</a>
+      <a href="#flavours" class="anchor nav-link">Flavours</a>
+      <a href="#menu" class="anchor nav-link">Menu</a>
+      <a href="#experience" class="anchor nav-link">Experiences</a>
+      <a href="#weddings" class="anchor nav-link">Weddings</a>
+      <a href="#gallery" class="anchor nav-link">Gallery</a>
+      <a href="#contact" class="anchor nav-link">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:+919876543210" class="hidden xl:flex items-center gap-2 text-sm text-stone hover:text-ink transition-colors">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+        +91 98765 43210
+      </a>
+      <button data-open-modal="modal-reserve" class="btn btn-gold !py-3 !px-6">Book A Table</button>
+      <button id="burger" class="lg:hidden w-11 h-11 flex flex-col items-center justify-center gap-[5px] rounded-full border border-champagne" aria-label="Menu">
+        <span class="block w-5 h-px bg-ink transition-all"></span>
+        <span class="block w-5 h-px bg-ink transition-all"></span>
+        <span class="block w-5 h-px bg-ink transition-all"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="fixed inset-0 z-[110] bg-ivory hidden">
+  <div class="h-full flex flex-col px-8 pt-28 pb-10">
+    <button id="closeMobile" class="absolute top-5 right-5 w-11 h-11 rounded-full border border-champagne flex items-center justify-center" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 2l12 12M14 2L2 14" stroke="#2E2A24" stroke-width="1.5"/></svg>
+    </button>
+    <nav class="flex flex-col gap-6 font-serif text-4xl text-ink">
+      <a href="#story" class="anchor mob-link">Our Story</a>
+      <a href="#flavours" class="anchor mob-link">Flavours</a>
+      <a href="#menu" class="anchor mob-link">Menu</a>
+      <a href="#experience" class="anchor mob-link">Experiences</a>
+      <a href="#weddings" class="anchor mob-link">Weddings</a>
+      <a href="#gallery" class="anchor mob-link">Gallery</a>
+      <a href="#contact" class="anchor mob-link">Contact</a>
+    </nav>
+    <div class="mt-auto flex flex-col gap-3">
+      <button data-open-modal="modal-reserve" class="btn btn-gold w-full">Book A Table</button>
+      <a href="tel:+919876543210" class="btn btn-outline w-full">Call +91 98765 43210</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 lg:pt-24 overflow-hidden">
+  <div class="absolute -top-32 -right-32 w-[36rem] h-[36rem] rounded-full bg-champagne/50 blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 -left-40 w-[30rem] h-[30rem] rounded-full bg-cream pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10 w-full">
+    <!-- Text -->
+    <div class="lg:col-span-7">
+      <div class="hero-el eyebrow mb-7">100% Pure Vegetarian · Multi-Cuisine Fine Dining</div>
+      <h1 class="hero-el font-serif text-[clamp(3.4rem,9vw,7.5rem)] leading-[.95] tracking-[.02em] text-ink">
+        BASALT
+        <span class="block serif-i font-normal text-gold text-[clamp(1.5rem,3.4vw,2.6rem)] mt-3 tracking-normal">Crafted Flavours. Curated Moments.</span>
+      </h1>
+      <p class="hero-el text-stone text-lg leading-relaxed max-w-xl mt-8 font-light">
+        A celebration of Marathi soil and world kitchens — where Kolhapuri fire meets Japanese calm, every plate is a passage. Welcome to Pune's most warm-hearted fine-dining table.
+      </p>
+      <div class="hero-el flex flex-wrap gap-4 mt-10">
+        <button data-open-modal="modal-reserve" class="btn btn-gold">Book A Table
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <a href="#menu" class="anchor btn btn-outline">Explore Menu</a>
+        <button data-open-modal="modal-event" class="btn btn-outline !border-ink/20">Plan Your Event</button>
+      </div>
+      <div class="hero-el flex flex-wrap items-center gap-x-8 gap-y-3 mt-12 text-sm text-stone">
+        <span class="flex items-center gap-2">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#B08D57"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <strong class="font-medium text-ink">4.9</strong> · 1,200+ Google reviews
+        </span>
+        <span class="hidden sm:block w-px h-4 bg-champagne"></span>
+        <span class="flex items-center gap-2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Koregaon Park, Pune
+        </span>
+        <span class="hidden sm:block w-px h-4 bg-champagne"></span>
+        <span>Est. 2019</span>
+      </div>
+    </div>
+
+    <!-- Images -->
+    <div class="lg:col-span-5 relative hero-el">
+      <div class="img-zoom rounded-[2rem] shadow-lift bg-champagne">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop" alt="Basalt fine-dining ambience" class="w-full h-[52vh] lg:h-[64vh] object-cover" data-parallax="-6" data-parallax-wrap>
+      </div>
+      <div class="img-zoom absolute -bottom-8 -left-6 md:-left-12 w-40 md:w-52 rounded-2xl border-[6px] border-ivory shadow-lift bg-champagne">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=500&auto=format&fit=crop" alt="Signature dessert" class="w-full h-40 md:h-52 object-cover">
+      </div>
+      <!-- rotating badge -->
+      <div class="absolute -top-9 -right-3 md:-right-7 w-28 h-28 md:w-32 md:h-32">
+        <div class="absolute inset-0 rounded-full bg-ivory shadow-card"></div>
+        <svg viewBox="0 0 200 200" class="animate-spin-slow absolute inset-0 w-full h-full p-2">
+          <defs><path id="cpath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text fill="#B08D57" font-size="12.5" letter-spacing="3.2" font-family="Jost,sans-serif" font-weight="500">
+            <textPath href="#cpath">BASALT CULINARY JOURNEY · 100% VEGETARIAN ·</textPath>
+          </text>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.4"><path d="M12 21c-4 0-7-3-7-7 0-5 4-9 11-11-1 7-1 13-4 18z"/><path d="M6 21c2-5 6-9 11-11"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-el absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone">
+    <span class="text-[.6rem] tracking-[.35em] uppercase">Scroll</span>
+    <span class="w-px h-10 bg-gradient-to-b from-gold to-transparent"></span>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="border-y border-champagne bg-cream/60 py-5 overflow-hidden">
+  <div class="marquee-track font-serif text-xl md:text-2xl text-golddeep/80 italic">
+    <div class="flex items-center gap-10 pr-10" id="marqueeContent">
+      <span>Marathi Flavours</span><span class="text-gold">✦</span>
+      <span>Multi-Cuisine</span><span class="text-gold">✦</span>
+      <span>100% Vegetarian</span><span class="text-gold">✦</span>
+      <span>Fine Dining</span><span class="text-gold">✦</span>
+      <span>Weddings &amp; Events</span><span class="text-gold">✦</span>
+      <span>Premium Catering</span><span class="text-gold">✦</span>
+      <span>Craft Coffee</span><span class="text-gold">✦</span>
+      <span>Signature Mocktails</span><span class="text-gold">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STORY ================= -->
+<section id="story" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="relative" data-reveal>
+      <div class="img-zoom rounded-[2rem] shadow-soft bg-champagne">
+        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=900&auto=format&fit=crop" alt="Fresh ingredients at Basalt" class="w-full h-[26rem] object-cover">
+      </div>
+      <div class="img-zoom absolute -bottom-10 -right-4 md:-right-8 w-44 md:w-60 rounded-2xl border-[6px] border-ivory shadow-lift bg-champagne">
+        <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=500&auto=format&fit=crop" alt="Chef plating a dish" class="w-full h-36 md:h-44 object-cover">
+      </div>
+      <div class="absolute -top-5 -left-5 bg-ivory rounded-2xl shadow-card px-6 py-4 hidden md:block">
+        <div class="font-serif text-3xl text-gold">100%</div>
+        <div class="text-[.62rem] tracking-[.25em] uppercase text-stone">Pure Vegetarian</div>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow mb-6" data-reveal>Our Story</div>
+      <h2 class="font-serif text-4xl md:text-5xl leading-tight text-ink" data-reveal>A table rooted in <span class="serif-i text-gold">Marathi soil</span>, set with the world's flavours.</h2>
+      <p class="text-stone leading-relaxed mt-7 font-light" data-reveal>
+        Basalt began with a simple belief — that vegetarian food, when treated with reverence, becomes art. Born in the lanes of Maharashtra and trained in the kitchens of the world, our chefs weave Kolhapuri fire, Konkan coast freshness and global technique into one unhurried dining journey.
+      </p>
+      <p class="text-stone leading-relaxed mt-5 font-light" data-reveal>
+        Every dish is cooked from scratch, every spice is hand-picked from small farms, and every plate is served with the warmth of a Marathi home — only finer.
+      </p>
+      <div class="divider-gold mt-8" data-reveal></div>
+      <div class="serif-i text-2xl text-ink mt-6" data-reveal>— The Basalt Family</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10" data-reveal>
+        <div><div class="font-serif text-4xl md:text-5xl text-gold"><span class="counter" data-target="100">0</span>%</div><div class="text-[.62rem] tracking-[.22em] uppercase text-stone mt-2">Vegetarian Always</div></div>
+        <div><div class="font-serif text-4xl md:text-5xl text-gold"><span class="counter" data-target="45">0</span>+</div><div class="text-[.62rem] tracking-[.22em] uppercase text-stone mt-2">Curated Dishes</div></div>
+        <div><div class="font-serif text-4xl md:text-5xl text-gold"><span class="counter" data-target="500">0</span>+</div><div class="text-[.62rem] tracking-[.22em] uppercase text-stone mt-2">Events Hosted</div></div>
+        <div><div class="font-serif text-4xl md:text-5xl text-gold"><span class="counter" data-target="4.9" data-decimal="1">0</span></div><div class="text-[.62rem] tracking-[.22em] uppercase text-stone mt-2">Google Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARATHI & INDIAN ================= -->
+<section id="flavours" class="py-24 md:py-32 bg-cream/50 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div>
+        <div class="eyebrow mb-6" data-reveal>The Roots</div>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight text-ink" data-reveal>Marathi &amp; <span class="serif-i text-gold">Indian Flavours</span></h2>
+      </div>
+      <p class="text-stone max-w-md font-light leading-relaxed" data-reveal>From the fiery soul of Kolhapuri misal to the sweet nostalgia of puran poli — our Marathi kitchen is the beating heart of Basalt.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="img-zoom rounded-2xl shadow-card bg-champagne group relative h-80" data-reveal>
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=700&auto=format&fit=crop" alt="Crisp samosa" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <div class="font-serif text-2xl text-ivory">Street-Born Spice</div>
+          <div class="text-ivory/80 text-sm">Crisp, golden, served with the house chutneys</div>
+        </div>
+      </div>
+      <div class="img-zoom rounded-2xl shadow-card bg-champagne group relative h-80" data-reveal data-delay=".1">
+        <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=700&auto=format&fit=crop" alt="Maharashtrian thali" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <div class="font-serif text-2xl text-ivory">The Grand Thali</div>
+          <div class="text-ivory/80 text-sm">A complete Maharashtrian spread, served with ceremony</div>
+        </div>
+      </div>
+      <div class="img-zoom rounded-2xl shadow-card bg-champagne group relative h-80" data-reveal data-delay=".2">
+        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=700&auto=format&fit=crop" alt="Slow-cooked Indian curry" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <div class="font-serif text-2xl text-ivory">Slow-Simmered Curries</div>
+          <div class="text-ivory/80 text-sm">Hand-pounded masalas, finished with ghee &amp; cream</div>
+        </div>
+      </div>
+      <div class="img-zoom rounded-2xl shadow-card bg-champagne group relative h-80" data-reveal data-delay=".3">
+        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=700&auto=format&fit=crop" alt="Paneer tikka skewers" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="absolute bottom-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <div class="font-serif text-2xl text-ivory">Fire &amp; Smoke</div>
+          <div class="text-ivory/80 text-sm">Tandoor-roasted paneer, charred to perfection</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-cuisine strip -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-16">
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal>
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=400&auto=format&fit=crop" alt="Sushi" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Japanese</div><div class="text-xs text-stone mt-1 tracking-wide">Sushi · Rolls · Miso</div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal data-delay=".05">
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=400&auto=format&fit=crop" alt="Wood-fired pizza" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Italian</div><div class="text-xs text-stone mt-1 tracking-wide">Pizza · Pasta · Risotto</div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal data-delay=".1">
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=400&auto=format&fit=crop" alt="Wok-tossed noodles" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Chinese</div><div class="text-xs text-stone mt-1 tracking-wide">Wok · Dimsum · Noodles</div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal data-delay=".15">
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=400&auto=format&fit=crop" alt="Chocolate fondant" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Desserts</div><div class="text-xs text-stone mt-1 tracking-wide">Fondant · Kulfi · Tiramisu</div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal data-delay=".2">
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=400&auto=format&fit=crop" alt="Signature mocktails" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Mocktails</div><div class="text-xs text-stone mt-1 tracking-wide">Saffron · Kokum · Citrus</div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-2xl p-6 text-center" data-reveal data-delay=".25">
+        <div class="img-zoom rounded-xl h-28 mb-4 bg-champagne"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=400&auto=format&fit=crop" alt="Craft coffee" class="w-full h-full object-cover"></div>
+        <div class="font-serif text-lg">Craft Coffee</div><div class="text-xs text-stone mt-1 tracking-wide">Filter · Espresso · Chai</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ALL-DAY DINING ================= -->
+<section id="dayparts" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <div class="eyebrow mb-6 justify-center" data-reveal>All-Day Dining</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>From first sip to <span class="serif-i text-gold">last toast</span></h2>
+      <p class="text-stone font-light mt-5" data-reveal>One kitchen, six moods — coffee mornings, lazy brunches, grand lunches, candle-lit dinners, wood-fire roasts and evening mocktails.</p>
+    </div>
+
+    <div class="flex justify-center gap-2 md:gap-3 flex-wrap mb-12" data-reveal id="dpTabs">
+      <button class="dp-tab active flex items-center gap-3 px-2 py-2" data-dp="coffee"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Coffee</span></button>
+      <button class="dp-tab flex items-center gap-3 px-2 py-2" data-dp="brunch"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Brunch</span></button>
+      <button class="dp-tab flex items-center gap-3 px-2 py-2" data-dp="lunch"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Lunch</span></button>
+      <button class="dp-tab flex items-center gap-3 px-2 py-2" data-dp="dinner"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Dinner</span></button>
+      <button class="dp-tab flex items-center gap-3 px-2 py-2" data-dp="roast"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Roast</span></button>
+      <button class="dp-tab flex items-center gap-3 px-2 py-2" data-dp="mocktails"><span class="dp-dot w-2 h-2 rounded-full bg-stonelight"></span><span class="dp-name text-sm tracking-[.15em] uppercase text-stone">Mocktails</span></button>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10 items-stretch" data-reveal>
+      <div class="lg:col-span-2 img-zoom rounded-[2rem] shadow-soft bg-champagne min-h-[22rem]">
+        <img id="dpImage" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=900&auto=format&fit=crop" alt="Coffee at Basalt" class="w-full h-full object-cover min-h-[22rem]">
+      </div>
+      <div class="lg:col-span-3 bg-white/60 border border-champagne rounded-[2rem] p-8 md:p-10 shadow-card">
+        <div class="serif-i text-gold text-xl" id="dpTagline">Slow mornings, poured with care</div>
+        <div id="dpItems" class="mt-6 divide-y divide-champagne"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SIGNATURE DISHES ================= -->
+<section id="signatures" class="py-24 md:py-32 bg-cream/50 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div>
+        <div class="eyebrow mb-6" data-reveal>Chef's Table</div>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight text-ink" data-reveal>Signature <span class="serif-i text-gold">Dishes</span></h2>
+      </div>
+      <p class="text-stone max-w-md font-light leading-relaxed" data-reveal>Six plates that guests travel across the city for — each one a small story of Basalt.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7" id="sigGrid"></div>
+  </div>
+</section>
+
+<!-- ================= FULL MENU ================= -->
+<section id="menu" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-5xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-12">
+      <div class="eyebrow mb-6 justify-center" data-reveal>The Digital Menu</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>Dine through <span class="serif-i text-gold">the world</span></h2>
+      <p class="text-stone font-light mt-5 max-w-xl mx-auto" data-reveal>Menus evolve with the seasons and the market. Here is a taste of what awaits you.</p>
+    </div>
+    <div class="flex gap-2 overflow-x-auto pb-3 mb-10 justify-start md:justify-center flex-wrap md:flex-nowrap" id="menuTabs" data-reveal></div>
+    <div id="menuItems" class="grid md:grid-cols-2 gap-x-14 gap-y-9" data-reveal></div>
+    <div class="text-center mt-12" data-reveal>
+      <button onclick="window.print()" class="btn btn-outline">Download Full Menu</button>
+      <p class="text-xs text-stonelight mt-5 tracking-wide">Please inform us of any allergies — our kitchen is entirely vegetarian and happily customises.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE / AMBIENCE ================= -->
+<section id="experience" class="relative py-32 md:py-44 overflow-hidden scroll-mt-20">
+  <div class="absolute inset-0 img-zoom" data-parallax-wrap>
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1800&auto=format&fit=crop" alt="Basalt dining room" class="w-full h-[130%] object-cover" data-parallax="-12">
+  </div>
+  <div class="absolute inset-0 bg-ivory/85"></div>
+  <div class="relative max-w-3xl mx-auto px-5 text-center">
+    <div class="eyebrow mb-8 justify-center" data-reveal>The Experience</div>
+    <div class="font-serif text-3xl md:text-5xl leading-snug text-ink" data-reveal>
+      "Where candlelight meets <span class="serif-i text-gold">Kolhapuri fire</span> — dinner becomes a memory you keep returning to."
+    </div>
+    <div class="divider-gold mx-auto mt-8" data-reveal></div>
+    <div class="text-[.68rem] tracking-[.3em] uppercase text-stone mt-6" data-reveal>Arjun Mehta · Founder, Basalt Culinary Journey</div>
+  </div>
+</section>
+
+<!-- ================= WEDDINGS & CELEBRATIONS ================= -->
+<section id="weddings" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="eyebrow mb-6 justify-center" data-reveal>Weddings &amp; Celebrations</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>Feasts for life's <span class="serif-i text-gold">grandest chapters</span></h2>
+      <p class="text-stone font-light mt-5" data-reveal>From intimate anniversaries to 500-guest receptions — we design vegetarian menus that make every celebration unforgettable.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-7">
+      <div class="lift-card bg-white/70 border border-champagne rounded-3xl overflow-hidden" data-reveal>
+        <div class="img-zoom h-60 bg-champagne"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop" alt="Wedding table setting" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <div class="text-[.6rem] tracking-[.25em] uppercase text-gold mb-2">01 · Weddings &amp; Receptions</div>
+          <h3 class="font-serif text-2xl mb-3">Wedding Dining</h3>
+          <p class="text-sm text-stone font-light leading-relaxed">Multi-course vegetarian feasts, live counters, curated thalis and grand buffets for 50–500 guests. Full event coordination included.</p>
+          <button data-open-modal="modal-event" data-preset="Wedding" class="mt-5 text-xs tracking-[.2em] uppercase text-golddeep flex items-center gap-2 hover:gap-3 transition-all">Plan Your Wedding <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-3xl overflow-hidden" data-reveal data-delay=".1">
+        <div class="img-zoom h-60 bg-champagne"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop" alt="Private celebration dinner" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <div class="text-[.6rem] tracking-[.25em] uppercase text-gold mb-2">02 · Private Parties</div>
+          <h3 class="font-serif text-2xl mb-3">Birthday &amp; Anniversary</h3>
+          <p class="text-sm text-stone font-light leading-relaxed">Private decks, customised menus, surprise desserts and personal hosts — for the moments that deserve a standing ovation.</p>
+          <button data-open-modal="modal-event" data-preset="Birthday / Anniversary" class="mt-5 text-xs tracking-[.2em] uppercase text-golddeep flex items-center gap-2 hover:gap-3 transition-all">Plan Your Party <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="lift-card bg-white/70 border border-champagne rounded-3xl overflow-hidden" data-reveal data-delay=".2">
+        <div class="img-zoom h-60 bg-champagne"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop" alt="Corporate event" class="w-full h-full object-cover"></div>
+        <div class="p-7">
+          <div class="text-[.6rem] tracking-[.25em] uppercase text-gold mb-2">03 · Corporate &amp; Special</div>
+          <h3 class="font-serif text-2xl mb-3">Corporate Events</h3>
+          <p class="text-sm text-stone font-light leading-relaxed">Boardroom lunches, product launches, annual gatherings — polished service, discreet teams and menus that impress every palate.</p>
+          <button data-open-modal="modal-event" data-preset="Corporate Event" class="mt-5 text-xs tracking-[.2em] uppercase text-golddeep flex items-center gap-2 hover:gap-3 transition-all">Plan Your Event <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wedding banner -->
+    <div class="relative mt-16 rounded-[2rem] overflow-hidden shadow-soft" data-reveal data-parallax-wrap>
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Wedding celebration" class="w-full h-[26rem] md:h-[30rem] object-cover" data-parallax="-8">
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/55 to-ink/25"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-14">
+        <div class="text-goldlight text-[.65rem] tracking-[.35em] uppercase mb-4">Let Us Host Your Once-in-a-Lifetime Feast</div>
+        <h3 class="font-serif text-3xl md:text-5xl text-ivory max-w-xl leading-tight">Weddings, receptions &amp; celebrations — served the Basalt way</h3>
+        <button data-open-modal="modal-event" class="btn btn-gold mt-8">Plan Your Event</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATERING ================= -->
+<section id="catering" class="py-24 md:py-32 bg-cream/50 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="relative order-2 lg:order-1" data-reveal>
+      <div class="img-zoom rounded-[2rem] shadow-soft bg-champagne">
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1000&auto=format&fit=crop" alt="Premium catering buffet" class="w-full h-[24rem] md:h-[30rem] object-cover">
+      </div>
+      <div class="absolute -bottom-7 -right-4 md:-right-7 bg-ivory rounded-2xl shadow-card px-7 py-5">
+        <div class="font-serif text-3xl text-gold">500+</div>
+        <div class="text-[.62rem] tracking-[.22em] uppercase text-stone">Events Catered</div>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2">
+      <div class="eyebrow mb-6" data-reveal>Premium Catering</div>
+      <h2 class="font-serif text-4xl md:text-5xl leading-tight text-ink" data-reveal>Catering that travels <span class="serif-i text-gold">with grace</span></h2>
+      <p class="text-stone font-light leading-relaxed mt-6" data-reveal>From intimate gatherings to grand festivals, our catering team brings the full Basalt experience to your venue — live stations, curated buffets and impeccable service, all 100% vegetarian.</p>
+      <ul class="mt-8 space-y-4" data-reveal>
+        <li class="flex items-start gap-4"><span class="mt-1 w-6 h-6 rounded-full bg-gold/15 flex items-center justify-center shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="2.2"><path d="M4 12l5 5L20 6"/></svg></span><span class="text-ink"><strong class="font-medium">Weddings &amp; Receptions</strong> — full-day or multi-day wedding catering</span></li>
+        <li class="flex items-start gap-4"><span class="mt-1 w-6 h-6 rounded-full bg-gold/15 flex items-center justify-center shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="2.2"><path d="M4 12l5 5L20 6"/></svg></span><span class="text-ink"><strong class="font-medium">Corporate &amp; Conferences</strong> — boardroom to ballroom</span></li>
+        <li class="flex items-start gap-4"><span class="mt-1 w-6 h-6 rounded-full bg-gold/15 flex items-center justify-center shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="2.2"><path d="M4 12l5 5L20 6"/></svg></span><span class="text-ink"><strong class="font-medium">Festivals &amp; Grand Celebrations</strong> — Ganesh Chaturthi, Diwali, Gudi Padwa &amp; more</span></li>
+        <li class="flex items-start gap-4"><span class="mt-1 w-6 h-6 rounded-full bg-gold/15 flex items-center justify-center shrink-0"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="2.2"><path d="M4 12l5 5L20 6"/></svg></span><span class="text-ink"><strong class="font-medium">Private Gatherings</strong> — birthdays, anniversaries, house parties</span></li>
+      </ul>
+      <div class="flex flex-wrap gap-4 mt-10" data-reveal>
+        <button data-open-modal="modal-catering" class="btn btn-gold">Request Catering Quote</button>
+        <a href="https://wa.me/919876543210?text=Hello%20Basalt%2C%20I%20would%20like%20to%20know%20more%20about%20your%20catering%20services." target="_blank" rel="noopener" class="btn btn-outline">WhatsApp Catering Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-14">
+      <div class="eyebrow mb-6 justify-center" data-reveal>The Gallery</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>Moments at <span class="serif-i text-gold">Basalt</span></h2>
+    </div>
+    <div class="columns-2 md:columns-3 gap-4" id="galleryGrid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section id="reviews" class="py-24 md:py-32 bg-cream/50 scroll-mt-20">
+  <div class="max-w-3xl mx-auto px-5 md:px-8 text-center">
+    <div class="eyebrow mb-6 justify-center" data-reveal>Guest Love</div>
+    <h2 class="font-serif text-4xl md:text-5xl text-ink mb-14" data-reveal>Words from our <span class="serif-i text-gold">guests</span></h2>
+    <div class="relative h-[16rem] md:h-[13rem]" id="reviewWrap" data-reveal></div>
+    <div class="flex items-center justify-center gap-6 mt-6" data-reveal>
+      <button id="revPrev" class="w-11 h-11 rounded-full border border-champagne flex items-center justify-center hover:bg-gold hover:text-ivory hover:border-gold transition-all" aria-label="Previous review">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      </button>
+      <div class="flex gap-2" id="revDots"></div>
+      <button id="revNext" class="w-11 h-11 rounded-full border border-champagne flex items-center justify-center hover:bg-gold hover:text-ivory hover:border-gold transition-all" aria-label="Next review">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section id="instagram" class="py-24 md:py-32 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+      <div>
+        <div class="eyebrow mb-6" data-reveal>Instagram</div>
+        <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal><span class="serif-i text-gold">@basalt_culinary_journey</span></h2>
+        <p class="text-stone font-light mt-4 max-w-md" data-reveal>Daily plates, behind-the-scenes kitchens and celebrations — follow the journey.</p>
+      </div>
+      <a href="https://instagram.com/basalt_culinary_journey" target="_blank" rel="noopener" class="btn btn-ink self-start md:self-auto" data-reveal>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+        Follow Us
+      </a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" id="igGrid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ================= LOCATION & CONTACT ================= -->
+<section id="contact" class="py-24 md:py-32 bg-cream/50 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-14">
+      <div class="eyebrow mb-6 justify-center" data-reveal>Visit Us</div>
+      <h2 class="font-serif text-4xl md:text-5xl text-ink" data-reveal>Find your way to <span class="serif-i text-gold">the table</span></h2>
+    </div>
+    <div class="grid lg:grid-cols-5 gap-8">
+      <div class="lg:col-span-2 bg-white/70 border border-champagne rounded-3xl p-8 md:p-10 shadow-card flex flex-col gap-7" data-reveal>
+        <div>
+          <div class="flex items-center gap-3 mb-2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="text-[.65rem] tracking-[.25em] uppercase text-gold">Address</span></div>
+          <p class="font-serif text-xl leading-snug">Basalt Culinary Journey<br>1st Floor, Lane 7, Koregaon Park,<br>Pune, Maharashtra 411001</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span class="text-[.65rem] tracking-[.25em] uppercase text-gold">Opening Hours</span></div>
+          <p class="font-serif text-xl">Monday – Sunday<br><span class="text-stone text-base font-sans">11:00 AM – 11:00 PM · Kitchen till 10:30 PM</span></p>
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-2"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg><span class="text-[.65rem] tracking-[.25em] uppercase text-gold">Contact</span></div>
+          <p class="font-serif text-xl">+91 98765 43210<br><span class="text-stone text-base font-sans">hello@basaltculinary.com</span></p>
+        </div>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="tel:+919876543210" class="btn btn-ink !px-5 !py-3">Call Now</a>
+          <a href="https://wa.me/919876543210?text=Hello%20Basalt%20Culinary%20Journey!" target="_blank" rel="noopener" class="btn btn-outline !px-5 !py-3">WhatsApp</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Koregaon+Park+Lane+7+Pune" target="_blank" rel="noopener" class="btn btn-gold !px-5 !py-3">Get Directions</a>
+        </div>
+      </div>
+      <div class="lg:col-span-3 rounded-3xl overflow-hidden shadow-card bg-champagne min-h-[24rem]" data-reveal data-delay=".1">
+        <iframe title="Basalt Culinary Journey on Google Maps" src="https://maps.google.com/maps?q=Koregaon%20Park%20Lane%207%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-full min-h-[24rem] map-frame" loading="lazy" style="border:0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="py-24 md:py-32 relative overflow-hidden">
+  <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[42rem] h-[42rem] rounded-full bg-champagne/60 blur-3xl pointer-events-none"></div>
+  <div class="max-w-3xl mx-auto px-5 text-center relative">
+    <div class="eyebrow mb-6 justify-center" data-reveal>Begin Your Journey</div>
+    <h2 class="font-serif text-4xl md:text-6xl leading-tight text-ink" data-reveal>Ready to dine, celebrate <span class="serif-i text-gold">&amp; cater?</span></h2>
+    <p class="text-stone font-light mt-6 max-w-xl mx-auto" data-reveal>Reserve your table, enquire about an event, or request a catering quote — our hospitality team responds within minutes.</p>
+    <div class="flex flex-wrap justify-center gap-4 mt-10" data-reveal>
+      <button data-open-modal="modal-reserve" class="btn btn-gold">Book A Table</button>
+      <button data-open-modal="modal-event" class="btn btn-outline">Plan Your Event</button>
+      <button data-open-modal="modal-catering" class="btn btn-outline">Request Catering Quote</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-ink text-ivory/85 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div>
+      <div class="font-serif text-3xl tracking-[.14em] text-ivory">BASALT</div>
+      <div class="text-[.58rem] tracking-[.4em] uppercase text-goldlight mt-1">Culinary Journey</div>
+      <p class="text-sm text-ivory/60 font-light leading-relaxed mt-6">A 100% pure vegetarian fine-dining destination — Marathi soul, world flavours, and hospitality with heart. Pune, since 2019.</p>
+      <div class="flex gap-3 mt-7">
+        <a href="https://instagram.com/basalt_culinary_journey" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold transition-all" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold transition-all" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.8l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Koregaon+Park+Lane+7+Pune" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center hover:bg-gold hover:border-gold transition-all" aria-label="Directions"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="text-[.65rem] tracking-[.3em] uppercase text-goldlight mb-6">Explore</div>
+      <ul class="space-y-3 text-sm font-light">
+        <li><a href="#story" class="anchor hover:text-goldlight transition-colors">Our Story</a></li>
+        <li><a href="#flavours" class="anchor hover:text-goldlight transition-colors">Marathi &amp; Indian Flavours</a></li>
+        <li><a href="#menu" class="anchor hover:text-goldlight transition-colors">Full Menu</a></li>
+        <li><a href="#signatures" class="anchor hover:text-goldlight transition-colors">Signature Dishes</a></li>
+        <li><a href="#gallery" class="anchor hover:text-goldlight transition-colors">Gallery</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-[.65rem] tracking-[.3em] uppercase text-goldlight mb-6">Celebrations</div>
+      <ul class="space-y-3 text-sm font-light">
+        <li><a href="#weddings" class="anchor hover:text-goldlight transition-colors">Weddings &amp; Receptions</a></li>
+        <li><a href="#weddings" class="anchor hover:text-goldlight transition-colors">Birthday &amp; Anniversary</a></li>
+        <li><a href="#weddings" class="anchor hover:text-goldlight transition-colors">Corporate Events</a></li>
+        <li><a href="#catering" class="anchor hover:text-goldlight transition-colors">Premium Catering</a></li>
+        <li><button data-open-modal="modal-event" class="hover:text-goldlight transition-colors">Send an Enquiry</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="text-[.65rem] tracking-[.3em] uppercase text-goldlight mb-6">Contact</div>
+      <ul class="space-y-3 text-sm font-light">
+        <li>1st Floor, Lane 7, Koregaon Park,<br>Pune, Maharashtra 411001</li>
+        <li><a href="tel:+919876543210" class="hover:text-goldlight transition-colors">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@basaltculinary.com" class="hover:text-goldlight transition-colors">hello@basaltculinary.com</a></li>
+        <li>Mon – Sun · 11:00 AM – 11:00 PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 mt-14 pt-8 border-t border-ivory/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ivory/45 font-light">
+    <div>© <span id="year"></span> Basalt Culinary Journey. All rights reserved.</div>
+    <div class="flex items-center gap-2"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9A96F" stroke-width="1.6"><path d="M12 21c-4 0-7-3-7-7 0-5 4-9 11-11-1 7-1 13-4 18z"/></svg> Proudly 100% Pure Vegetarian · Always</div>
+  </div>
+</footer>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+<div class="fixed bottom-6 right-6 z-[80] flex flex-col gap-3 items-end">
+  <a href="https://wa.me/919876543210?text=Hello%20Basalt%20Culinary%20Journey!" target="_blank" rel="noopener" class="float-btn" style="background:#4BAF6B" aria-label="WhatsApp us">
+    <span class="float-tip">WhatsApp Us</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm4.6 12.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.8l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+  </a>
+  <a href="tel:+919876543210" class="float-btn pulse-gold" style="background:#B08D57" aria-label="Call us">
+    <span class="float-tip">Call Us</span>
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg>
+  </a>
+</div>
+
+<!-- ================= LIGHTBOX ================= -->
+<div id="lightbox" class="fixed inset-0 z-[130] bg-ivory/95 backdrop-blur-sm hidden opacity-0 items-center justify-center p-4 md:p-10">
+  <button id="lbClose" class="lb-btn absolute top-5 right-5" aria-label="Close"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+  <button id="lbPrev" class="lb-btn absolute left-4 md:left-8 top-1/2 -translate-y-1/2" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+  <button id="lbNext" class="lb-btn absolute right-4 md:right-8 top-1/2 -translate-y-1/2" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <figure class="max-w-4xl w-full text-center">
+    <img id="lbImg" src="" alt="Gallery image" class="w-full max-h-[74vh] object-contain rounded-2xl shadow-lift bg-champagne">
+    <figcaption id="lbCap" class="font-serif italic text-xl text-stone mt-5"></figcaption>
+  </figure>
+</div>
+
+<!-- ================= MODAL: TABLE RESERVATION ================= -->
+<div id="modal-reserve" class="modal hidden">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card relative bg-ivory rounded-3xl shadow-lift w-full max-w-lg my-8 overflow-hidden">
+    <div class="bg-champagne/70 px-8 pt-8 pb-6 relative">
+      <button class="absolute top-5 right-5 w-9 h-9 rounded-full bg-ivory flex items-center justify-center hover:bg-gold hover:text-ivory transition-all" data-close-modal aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="text-[.6rem] tracking-[.3em] uppercase text-gold mb-2">Table Reservation</div>
+      <h3 class="font-serif text-3xl text-ink">Reserve My Table</h3>
+    </div>
+    <div class="p-8">
+      <form id="form-reserve" novalidate>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="flabel" for="r-name">Full Name *</label><input class="field" id="r-name" type="text" placeholder="e.g. Aarav Sharma" required><div class="ferr" id="e-r-name">Please enter your name.</div></div>
+          <div><label class="flabel" for="r-phone">Phone *</label><input class="field" id="r-phone" type="tel" placeholder="98765 43210" required><div class="ferr" id="e-r-phone">Enter a valid 10-digit number.</div></div>
+          <div><label class="flabel" for="r-email">Email *</label><input class="field" id="r-email" type="email" placeholder="you@email.com" required><div class="ferr" id="e-r-email">Enter a valid email address.</div></div>
+          <div><label class="flabel" for="r-date">Date *</label><input class="field" id="r-date" type="date" required><div class="ferr" id="e-r-date">Please choose a date.</div></div>
+          <div><label class="flabel" for="r-time">Time *</label><select class="field" id="r-time" required><option value="">Select time</option></select><div class="ferr" id="e-r-time">Please choose a time.</div></div>
+          <div class="col-span-2"><label class="flabel" for="r-guests">Guests *</label><select class="field" id="r-guests" required><option value="">Select guests</option><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5 Guests</option><option>6 Guests</option><option>7–10 Guests (large table)</option><option>11+ Guests (group booking)</option></select><div class="ferr" id="e-r-guests">Please select party size.</div></div>
+          <div class="col-span-2"><label class="flabel" for="r-req">Special Request</label><textarea class="field" id="r-req" rows="3" placeholder="Anniversary, window seat, high chair, dietary notes…"></textarea></div>
+        </div>
+        <p class="text-[.72rem] text-stonelight mt-4 leading-relaxed">This is a <strong class="text-stone">reservation request</strong> — our team will call you within 30 minutes to confirm table availability.</p>
+        <button type="submit" class="btn btn-gold w-full mt-5" id="btn-reserve">Reserve My Table</button>
+      </form>
+      <div id="success-reserve" class="hidden text-center py-6">
+        <svg class="mx-auto mb-5" width="72" height="72" viewBox="0 0 52 52"><circle class="check-circle" cx="26" cy="26" r="24" fill="none" stroke="#B08D57" stroke-width="1.5"/><path class="check-mark" fill="none" stroke="#B08D57" stroke-width="2.5" stroke-linecap="round" d="M14 27l8 8 16-17"/></svg>
+        <h4 class="font-serif text-3xl text-ink">Reservation Request Received</h4>
+        <p class="text-stone font-light mt-3 leading-relaxed">Thank you, <span id="sr-name" class="text-ink font-medium"></span>! Our host team will call <span id="sr-phone" class="text-ink font-medium"></span> within 30 minutes to confirm your table for <span id="sr-detail" class="text-ink font-medium"></span>.</p>
+        <div class="inline-block bg-champagne/60 rounded-xl px-5 py-2 mt-4 text-sm tracking-widest text-golddeep font-medium" id="sr-ref"></div>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-7">
+          <a id="sr-wa" href="#" target="_blank" rel="noopener" class="btn btn-ink">Confirm on WhatsApp</a>
+          <button class="btn btn-outline" data-close-modal>Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: EVENT ENQUIRY ================= -->
+<div id="modal-event" class="modal hidden">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card relative bg-ivory rounded-3xl shadow-lift w-full max-w-lg my-8 overflow-hidden">
+    <div class="bg-champagne/70 px-8 pt-8 pb-6 relative">
+      <button class="absolute top-5 right-5 w-9 h-9 rounded-full bg-ivory flex items-center justify-center hover:bg-gold hover:text-ivory transition-all" data-close-modal aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="text-[.6rem] tracking-[.3em] uppercase text-gold mb-2">Weddings &amp; Events</div>
+      <h3 class="font-serif text-3xl text-ink">Send an Enquiry</h3>
+    </div>
+    <div class="p-8">
+      <form id="form-event" novalidate>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="flabel" for="e-name">Full Name *</label><input class="field" id="e-name" type="text" placeholder="e.g. Priya &amp; Rohan" required><div class="ferr" id="e-e-name">Please enter your name.</div></div>
+          <div><label class="flabel" for="e-phone">Phone *</label><input class="field" id="e-phone" type="tel" placeholder="98765 43210" required><div class="ferr" id="e-e-phone">Enter a valid 10-digit number.</div></div>
+          <div><label class="flabel" for="e-type">Event Type *</label><select class="field" id="e-type" required><option value="">Select type</option><option>Wedding</option><option>Reception</option><option>Birthday / Anniversary</option><option>Corporate Event</option><option>Private Party</option><option>Family Function</option><option>Other</option></select><div class="ferr" id="e-e-type">Please select an event type.</div></div>
+          <div><label class="flabel" for="e-date">Event Date *</label><input class="field" id="e-date" type="date" required><div class="ferr" id="e-e-date">Please choose a date.</div></div>
+          <div><label class="flabel" for="e-guests">Approx. Guests *</label><select class="field" id="e-guests" required><option value="">Select guests</option><option>Up to 25</option><option>25 – 50</option><option>50 – 100</option><option>100 – 250</option><option>250 – 500</option><option>500+</option></select><div class="ferr" id="e-e-guests">Please select guest count.</div></div>
+          <div class="col-span-2"><label class="flabel" for="e-venue">Venue</label><input class="field" id="e-venue" type="text" placeholder="At Basalt / your venue / farm house…"></div>
+          <div class="col-span-2"><label class="flabel" for="e-budget">Budget (per guest)</label><select class="field" id="e-budget"><option value="">Select range</option><option>₹800 – ₹1,200</option><option>₹1,200 – ₹1,800</option><option>₹1,800 – ₹2,500</option><option>₹2,500+</option><option>Let's discuss</option></select></div>
+          <div class="col-span-2"><label class="flabel" for="e-req">Requirements *</label><textarea class="field" id="e-req" rows="3" placeholder="Menu preferences, live counters, decor, timing…" required></textarea><div class="ferr" id="e-e-req">Please tell us a little about your event.</div></div>
+        </div>
+        <button type="submit" class="btn btn-gold w-full mt-6" id="btn-event">Send Enquiry</button>
+      </form>
+      <div id="success-event" class="hidden text-center py-6">
+        <svg class="mx-auto mb-5" width="72" height="72" viewBox="0 0 52 52"><circle class="check-circle" cx="26" cy="26" r="24" fill="none" stroke="#B08D57" stroke-width="1.5"/><path class="check-mark" fill="none" stroke="#B08D57" stroke-width="2.5" stroke-linecap="round" d="M14 27l8 8 16-17"/></svg>
+        <h4 class="font-serif text-3xl text-ink">Enquiry Received</h4>
+        <p class="text-stone font-light mt-3 leading-relaxed">Our events team will call you within 30 minutes with a curated proposal for your <span id="se-type" class="text-ink font-medium"></span> on <span id="se-date" class="text-ink font-medium"></span>.</p>
+        <div class="inline-block bg-champagne/60 rounded-xl px-5 py-2 mt-4 text-sm tracking-widest text-golddeep font-medium" id="se-ref"></div>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-7">
+          <a id="se-wa" href="#" target="_blank" rel="noopener" class="btn btn-ink">Discuss on WhatsApp</a>
+          <button class="btn btn-outline" data-close-modal>Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: CATERING ================= -->
+<div id="modal-catering" class="modal hidden">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card relative bg-ivory rounded-3xl shadow-lift w-full max-w-lg my-8 overflow-hidden">
+    <div class="bg-champagne/70 px-8 pt-8 pb-6 relative">
+      <button class="absolute top-5 right-5 w-9 h-9 rounded-full bg-ivory flex items-center justify-center hover:bg-gold hover:text-ivory transition-all" data-close-modal aria-label="Close"><svg width="14" height="14" viewBox="0 0 16 16"><path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      <div class="text-[.6rem] tracking-[.3em] uppercase text-gold mb-2">Premium Catering</div>
+      <h3 class="font-serif text-3xl text-ink">Request a Quote</h3>
+    </div>
+    <div class="p-8">
+      <form id="form-catering" novalidate>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="flabel" for="c-name">Full Name / Organisation *</label><input class="field" id="c-name" type="text" placeholder="e.g. Meera Kulkarni / Acme Pvt Ltd" required><div class="ferr" id="e-c-name">Please enter your name.</div></div>
+          <div><label class="flabel" for="c-phone">Phone *</label><input class="field" id="c-phone" type="tel" placeholder="98765 43210" required><div class="ferr" id="e-c-phone">Enter a valid 10-digit number.</div></div>
+          <div><label class="flabel" for="c-type">Event Type *</label><select class="field" id="c-type" required><option value="">Select type</option><option>Wedding / Reception</option><option>Corporate / Conference</option><option>Festival Celebration</option><option>Birthday / Anniversary</option><option>Private Gathering</option><option>Other</option></select><div class="ferr" id="e-c-type">Please select an event type.</div></div>
+          <div><label class="flabel" for="c-date">Event Date *</label><input class="field" id="c-date" type="date" required><div class="ferr" id="e-c-date">Please choose a date.</div></div>
+          <div><label class="flabel" for="c-guests">No. of Guests *</label><select class="field" id="c-guests" required><option value="">Select guests</option><option>Up to 25</option><option>25 – 50</option><option>50 – 100</option><option>100 – 250</option><option>250 – 500</option><option>500+</option></select><div class="ferr" id="e-c-guests">Please select guest count.</div></div>
+          <div class="col-span-2"><label class="flabel" for="c-loc">Delivery / Event Location *</label><input class="field" id="c-loc" type="text" placeholder="Venue address, city" required><div class="ferr" id="e-c-loc">Please enter the location.</div></div>
+          <div class="col-span-2"><label class="flabel" for="c-req">Requirements *</label><textarea class="field" id="c-req" rows="3" placeholder="Buffet / plated, live counters, veg-only, timing…" required></textarea><div class="ferr" id="e-c-req">Please share your requirements.</div></div>
+        </div>
+        <button type="submit" class="btn btn-gold w-full mt-6" id="btn-catering">Request Quote</button>
+      </form>
+      <div id="success-catering" class="hidden text-center py-6">
+        <svg class="mx-auto mb-5" width="72" height="72" viewBox="0 0 52 52"><circle class="check-circle" cx="26" cy="26" r="24" fill="none" stroke="#B08D57" stroke-width="1.5"/><path class="check-mark" fill="none" stroke="#B08D57" stroke-width="2.5" stroke-linecap="round" d="M14 27l8 8 16-17"/></svg>
+        <h4 class="font-serif text-3xl text-ink">Quote Request Received</h4>
+        <p class="text-stone font-light mt-3 leading-relaxed">Our catering team will call you within 30 minutes with a detailed quotation for your <span id="sc-type" class="text-ink font-medium"></span> on <span id="sc-date" class="text-ink font-medium"></span>.</p>
+        <div class="inline-block bg-champagne/60 rounded-xl px-5 py-2 mt-4 text-sm tracking-widest text-golddeep font-medium" id="sc-ref"></div>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-7">
+          <a id="sc-wa" href="#" target="_blank" rel="noopener" class="btn btn-ink">Send on WhatsApp</a>
+          <button class="btn btn-outline" data-close-modal>Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script>
+/* ============================================================
+   BASALT CULINARY JOURNEY — Application Logic
+============================================================ */
+(function(){
+'use strict';
+
+/* ---------- Smooth scroll (Lenis) ---------- */
+let lenis = null;
+if (window.Lenis) {
+  lenis = new Lenis({ duration: 1.15, smoothWheel: true });
+  const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+  if (window.gsap && window.ScrollTrigger) {
+    lenis.on('scroll', ScrollTrigger.update);
+  }
+} else {
+  document.documentElement.style.scrollBehavior = 'smooth';
+}
+
+function scrollToTarget(sel){
+  const el = document.querySelector(sel);
+  if(!el) return;
+  if(lenis) lenis.scrollTo(el, { offset: -70 });
+  else el.scrollIntoView({ behavior:'smooth' });
+}
+
+/* ---------- Anchor links ---------- */
+document.querySelectorAll('a.anchor').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const href = a.getAttribute('href');
+    if(href && href.startsWith('#')){
+      e.preventDefault();
+      closeMobileMenu();
+      scrollToTarget(href);
+    }
+  });
+});
+
+/* ---------- Navbar ---------- */
+const nav = document.getElementById('nav');
+const onScroll = ()=> nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+/* ---------- Mobile menu ---------- */
+const mobileMenu = document.getElementById('mobileMenu');
+function openMobileMenu(){
+  mobileMenu.classList.remove('hidden');
+  if(lenis) lenis.stop();
+  document.body.style.overflow='hidden';
+  if(window.gsap) gsap.fromTo(mobileMenu, {opacity:0},{opacity:1,duration:.35});
+}
+function closeMobileMenu(){
+  if(mobileMenu.classList.contains('hidden')) return;
+  mobileMenu.classList.add('hidden');
+  if(lenis) lenis.start();
+  document.body.style.overflow='';
+}
+document.getElementById('burger').addEventListener('click', openMobileMenu);
+document.getElementById('closeMobile').addEventListener('click', closeMobileMenu);
+
+/* ---------- Preloader ---------- */
+const pre = document.getElementById('preloader');
+requestAnimationFrame(()=> setTimeout(()=> pre.querySelector('.pre-line').style.width='120px', 100));
+window.addEventListener('load', ()=> setTimeout(hidePre, 1100));
+setTimeout(hidePre, 2600); // safety
+let preDone = false;
+function hidePre(){
+  if(preDone) return; preDone = true;
+  pre.classList.add('done');
+  setTimeout(()=> pre.style.display='none', 950);
+  heroIntro();
+}
+
+/* ---------- GSAP setup ---------- */
+const hasGsap = !!(window.gsap && window.ScrollTrigger);
+if(hasGsap) gsap.registerPlugin(ScrollTrigger);
+
+function heroIntro(){
+  if(!hasGsap) return;
+  gsap.fromTo('.hero-el', {y:46, opacity:0}, {y:0, opacity:1, duration:1.1, stagger:.1, ease:'power3.out', delay:.15});
+}
+
+/* Scroll reveals */
+if(hasGsap){
+  gsap.utils.toArray('[data-reveal]').forEach(el=>{
+    gsap.fromTo(el, {y:44, opacity:0}, {
+      y:0, opacity:1, duration:1.05, ease:'power3.out',
+      delay: parseFloat(el.dataset.delay||0),
+      scrollTrigger:{ trigger: el, start:'top 88%', once:true }
+    });
+  });
+  /* Parallax */
+  gsap.utils.toArray('[data-parallax]').forEach(el=>{
+    gsap.to(el, {
+      yPercent: parseFloat(el.dataset.parallax||-8), ease:'none',
+      scrollTrigger:{ trigger: el.closest('[data-parallax-wrap]')||el, start:'top bottom', end:'bottom top', scrub:true }
+    });
+  });
+  /* Counters */
+  gsap.utils.toArray('.counter').forEach(c=>{
+    const target = parseFloat(c.dataset.target), dec = parseInt(c.dataset.decimal||0);
+    const obj = {v:0};
+    ScrollTrigger.create({
+      trigger:c, start:'top 90%', once:true,
+      onEnter:()=> gsap.to(obj,{v:target,duration:1.8,ease:'power2.out',onUpdate:()=>{ c.textContent = obj.v.toFixed(dec); }})
+    });
+  });
+}
+
+/* ---------- Signature dishes ---------- */
+const SIGNATURES = [
+  { img:'https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=800&auto=format&fit=crop', tag:'Maharashtrian', name:'The Royal Thali', desc:'A complete spread — amti, bharli vangi, bhakri, sol kadhi & puran poli, served with ceremony.', price:'₹450' },
+  { img:'https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=800&auto=format&fit=crop', tag:'Japanese', name:'Basalt Veg Sushi Platter', desc:'Chef\u2019s selection of eight pieces — avocado, pickled radish & cucumber, with wasabi and soy.', price:'₹450' },
+  { img:'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop', tag:'Italian', name:'Truffle Margherita', desc:'Wood-fired base, San Marzano tomatoes, fior di latte and a whisper of truffle oil.', price:'₹340' },
+  { img:'https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=800&auto=format&fit=crop', tag:'Tandoor', name:'Paneer Tikka Angara', desc:'Smoked cottage cheese, charred peppers and hung curd — our most-ordered plate since 2019.', price:'₹280' },
+  { img:'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=800&auto=format&fit=crop', tag:'Signature', name:'Saffron Sunset', desc:'Saffron, fresh orange and sparkling soda — the mocktail guests ask for by name.', price:'₹220' },
+  { img:'https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop', tag:'Dessert', name:'Puran Poli Cheesecake', desc:'A Marathi twist on an Italian classic — jaggery cheesecake with a ghee crumble.', price:'₹300' }
+];
+document.getElementById('sigGrid').innerHTML = SIGNATURES.map((s,i)=>`
+  <article class="lift-card bg-white/70 border border-champagne rounded-3xl overflow-hidden" data-reveal data-delay="${(i%3)*0.08}">
+    <div class="img-zoom h-64 bg-champagne relative">
+      <img src="${s.img}" alt="${s.name}" class="w-full h-full object-cover" loading="lazy">
+      <span class="absolute top-4 left-4 bg-ivory/90 backdrop-blur text-golddeep text-[.6rem] tracking-[.22em] uppercase px-3 py-1.5 rounded-full">${s.tag}</span>
+    </div>
+    <div class="p-7">
+      <div class="flex items-baseline justify-between gap-3">
+        <h3 class="font-serif text-2xl text-ink">${s.name}</h3>
+        <span class="font-serif text-xl text-gold whitespace-nowrap">${s.price}</span>
+      </div>
+      <p class="text-sm text-stone font-light leading-relaxed mt-3">${s.desc}</p>
+    </div>
+  </article>`).join('');
+
+/* ---------- Dayparts ---------- */
+const DAYPARTS = {
+  coffee:   { img:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=900&auto=format&fit=crop', tag:'Slow mornings, poured with care', items:[['Basalt Filter Coffee','South Indian filter, frothed milk, steel tumbler','₹160'],['Cappuccino / Café Latte','Single-origin espresso, delicate latte art','₹180'],['Masala Chai','Slow-brewed with ginger, cardamom & malai','₹120'],['Cold Brew Tonic','18-hour steep, citrus, sparkling water','₹200']] },
+  brunch:   { img:'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=900&auto=format&fit=crop', tag:'Lazy weekends, generous plates', items:[['Avocado Toast','Sourdough, smashed avocado, chilli flakes, seeds','₹280'],['Buttermilk Pancake Stack','Tall stack, maple, seasonal berries','₹260'],['Breakfast Burrito','Scrambled eggs, beans, corn, salsa roja','₹300'],['Shakshuka','Poached eggs in spiced tomato, crusty bread','₹240']] },
+  lunch:    { img:'https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=900&auto=format&fit=crop', tag:'The midday feast, served warm', items:[['Maharashtrian Royal Thali','A full vegetarian spread with sweets & sol kadhi','₹450'],['Dal Tadka Handi','Black urad, ghee tempering, garlic & cumin','₹320'],['Jeera Rice / Veg Biryani','Aged basmati, whole spices, saffron','₹240'],['Breads from the Tandoor','Butter naan, garlic naan, jowar bhakri','₹80']] },
+  dinner:   { img:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=900&auto=format&fit=crop', tag:'Candlelight & slow evenings', items:[['Veg Kolhapuri','Fiery red masala, traditional spice blend','₹360'],['Wild Mushroom Risotto','Arborio, porcini, parmesan, truffle oil','₹420'],['Grilled Veg Pesto Pasta','Charred zucchini, basil pesto, pine nuts','₹380'],['Chef\u2019s Roast Platter','Wood-fire roasted vegetables, three sauces','₹520']] },
+  roast:    { img:'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=900&auto=format&fit=crop', tag:'Wood-fire & patience', items:[['Roasted Cauliflower Steak','Tahini, pomegranate, toasted almonds','₹340'],['Tandoori Roast Veg Platter','Charred peppers, courgette, paneer, mint raita','₹320'],['Charred Corn & Halloumi','Lime butter, smoked paprika, herbs','₹260'],['Roast Pumpkin Soup','Ginger cream, toasted seeds, sourdough','₹220']] },
+  mocktails:{ img:'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=900&auto=format&fit=crop', tag:'Evenings, elevated — zero proof, full flavour', items:[['Saffron Sunset','Saffron, orange, sparkling soda — our signature','₹220'],['Kokum Cooler','Goa kokum, mint, black salt, soda','₹200'],['Mint & Cucumber Fizz','Muddled mint, cucumber, lime, tonic','₹200'],['Pomegranate Sangria','Virgin — citrus, cinnamon, sparkling style','₹260']] }
+};
+const dpItems = document.getElementById('dpItems');
+const dpImage = document.getElementById('dpImage');
+const dpTagline = document.getElementById('dpTagline');
+function setDaypart(key){
+  const d = DAYPARTS[key]; if(!d) return;
+  dpTagline.textContent = d.tag;
+  dpImage.src = d.img;
+  dpItems.innerHTML = d.items.map(it=>`
+    <div class="py-4 flex items-baseline gap-3">
+      <h4 class="font-serif text-lg text-ink whitespace-nowrap">${it[0]}</h4>
+      <span class="flex-1 border-b border-dotted border-stonelight/50"></span>
+      <span class="font-serif text-gold">${it[2]}</span>
+    </div>
+    <p class="text-sm text-stone font-light -mt-1 pb-1">${it[1]}</p>`).join('');
+  if(hasGsap) gsap.fromTo(dpItems.children, {opacity:0, y:12}, {opacity:1, y:0, duration:.5, stagger:.05, ease:'power2.out'});
+}
+document.querySelectorAll('.dp-tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.dp-tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    setDaypart(t.dataset.dp);
+  });
+});
+setDaypart('coffee');
+
+/* ---------- Full menu ---------- */
+const MENU = {
+  starters:{ label:'Starters', items:[
+    ['Hara Bhara Kabab','Spinach & potato patties, mint chutney','₹240'],
+    ['Paneer Tikka Angara','Smoked cottage cheese, charred peppers, hung curd','₹280'],
+    ['Truffle Mushroom Bruschetta','Wood-fired sourdough, truffle cream, thyme','₹320'],
+    ['Masala Papdi Chaat','Crisp wafers, boondi, tamarind, pomegranate','₹200'],
+    ['Crisp Vegetable Spring Rolls','Glass noodles, soy-ginger dip','₹220'],
+    ['Edamame & Citrus Salad','Steamed edamame, yuzu dressing, sesame','₹260']]},
+  marathi:{ label:'Marathi Special', items:[
+    ['Kolhapuri Misal Pav','Sprouted matki, fiery kolhapuri masala, farsan, butter pav','₹180'],
+    ['Bharli Vangi','Stuffed baby brinjals, peanut-coconut masala, bhakri','₹240'],
+    ['Puran Poli with Ghee','Sweet lentil flatbread, jaggery, cardamom, white butter','₹200'],
+    ['Sabudana Vada','Tapioca pearls, peanuts, curry leaves — a fasting classic','₹180'],
+    ['Zunka Bhakar','Besan crumble, green chilli, jowar bhakri','₹190'],
+    ['Modak (Sweet)','Rice-flour dumplings, coconut-jaggery filling','₹160']]},
+  indian:{ label:'Indian Mains', items:[
+    ['Dal Tadka Handi','Black urad dal, ghee, cumin & garlic tempering','₹320'],
+    ['Paneer Butter Masala','Cottage cheese, tomato-butter gravy, fenugreek cream','₹380'],
+    ['Veg Kolhapuri','Mixed vegetables, fiery red masala, traditional blend','₹360'],
+    ['Jeera Rice / Veg Biryani','Aged basmati, whole spices, saffron','₹240'],
+    ['Tandoori Breads','Butter naan, garlic naan, missi roti, jowar bhakri','₹80'],
+    ['Maharashtrian Royal Thali','Full spread — amti, bharli, bhakri, sol kadhi, sweets','₹450']]},
+  chinese:{ label:'Chinese', items:[
+    ['Veg Manchurian','Crisp vegetable balls, soy-garlic glaze, spring onions','₹260'],
+    ['Chilli Paneer','Wok-tossed cottage cheese, bell peppers, chilli sauce','₹280'],
+    ['Hakka Noodles','High-flame wok, vegetables, sesame, scallions','₹240'],
+    ['Dimsum Platter','Steamed vegetable dimsum, schezwan & soy dips','₹300']]},
+  continental:{ label:'Continental', items:[
+    ['Wild Mushroom Risotto','Arborio rice, porcini, parmesan, truffle oil','₹420'],
+    ['Grilled Veg Pesto Pasta','Penne, basil pesto, charred zucchini, pine nuts','₹380'],
+    ['Margherita Artigianale','Wood-fired base, San Marzano, fior di latte, basil','₹340'],
+    ['Quinoa & Roasted Veg Salad','Citrus dressing, avocado, pickled onions','₹300']]},
+  sushi:{ label:'Sushi & Japanese', items:[
+    ['Basalt Veg Sushi Platter','Chef\u2019s selection of 8 — avocado, cucumber, pickled radish','₹450'],
+    ['Avocado Maki Roll','6 pieces, sesame, soy, wasabi, pickled ginger','₹320'],
+    ['Edamame & Miso Soup','Steamed soybeans, dashi miso, wakame','₹200']]},
+  desserts:{ label:'Desserts', items:[
+    ['Basalt Signature Fondant','Molten dark chocolate, vanilla bean ice cream','₹280'],
+    ['Puran Poli Cheesecake','A Marathi twist — jaggery cheesecake, ghee crumble','₹300'],
+    ['Kulfi with Malai','Slow-reduced milk, pistachio, saffron','₹220'],
+    ['Classic Tiramisu','Espresso-soaked ladyfingers, mascarpone, cocoa','₹280'],
+    ['Fresh Fruit Tart','Vanilla custard, seasonal fruits, almond frangipane','₹260']]},
+  beverages:{ label:'Mocktails & Coffee', items:[
+    ['Saffron Sunset','Saffron, orange, sparkling soda — signature','₹220'],
+    ['Kokum Cooler','Goa kokum, mint, black salt, soda','₹200'],
+    ['Mint & Cucumber Fizz','Muddled mint, cucumber, lime, tonic','₹200'],
+    ['Pomegranate Sangria','Virgin — pomegranate, citrus, cinnamon','₹260'],
+    ['Basalt Filter Coffee','South Indian filter, frothed milk, steel tumbler','₹160'],
+    ['Masala Chai','Slow-brewed, ginger, cardamom, malai','₹120']]}
+};
+const menuTabsEl = document.getElementById('menuTabs');
+const menuItemsEl = document.getElementById('menuItems');
+menuTabsEl.innerHTML = Object.keys(MENU).map((k,i)=>`<button class="menu-tab ${i===0?'active':''}" data-m="${k}">${MENU[k].label}</button>`).join('');
+function renderMenu(key){
+  menuItemsEl.innerHTML = MENU[key].items.map(it=>`
+    <div>
+      <div class="flex items-baseline gap-3">
+        <h4 class="font-serif text-xl text-ink">${it[0]}</h4>
+        <span class="flex-1 border-b border-dotted border-stonelight/50"></span>
+        <span class="font-serif text-lg text-gold whitespace-nowrap">${it[2]}</span>
+      </div>
+      <p class="text-sm text-stone font-light mt-1">${it[1]}</p>
+    </div>`).join('');
+}
+menuTabsEl.addEventListener('click', e=>{
+  const btn = e.target.closest('.menu-tab'); if(!btn) return;
+  document.querySelectorAll('.menu-tab').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  menuItemsEl.classList.add('fading');
+  setTimeout(()=>{ renderMenu(btn.dataset.m); menuItemsEl.classList.remove('fading'); }, 280);
+});
+renderMenu('starters');
+
+/* ---------- Gallery ---------- */
+const GALLERY = [
+  ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop','The dining room at golden hour'],
+  ['https://images.unsplash.com/photo-1567337710282-00832b415979?q=80&w=800&auto=format&fit=crop','The Maharashtrian Royal Thali'],
+  ['https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800&auto=format&fit=crop','Hand-rolled vegetable sushi'],
+  ['https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop','A celebration at Basalt'],
+  ['https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=800&auto=format&fit=crop','Evening mocktails'],
+  ['https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop','Wood-fired Margherita'],
+  ['https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop','Candle-lit corners'],
+  ['https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop','Signature chocolate fondant'],
+  ['https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=800&auto=format&fit=crop','Catering grand buffets'],
+  ['https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop','Slow coffee mornings']
+];
+document.getElementById('galleryGrid').innerHTML = GALLERY.map((g,i)=>`
+  <figure class="g-item" data-i="${i}">
+    <img src="${g[0]}" alt="${g[1]}" loading="lazy">
+    <figcaption class="g-overlay"><span class="font-serif italic text-ivory text-lg">${g[1]}</span></figcaption>
+  </figure>`).join('');
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCap = document.getElementById('lbCap');
+let lbIndex = 0;
+function openLb(i){
+  lbIndex = (i+GALLERY.length)%GALLERY.length;
+  lbImg.src = GALLERY[lbIndex][0]; lbCap.textContent = GALLERY[lbIndex][1];
+  lb.classList.remove('hidden'); lb.classList.add('flex');
+  requestAnimationFrame(()=> lb.style.opacity='1');
+  if(lenis) lenis.stop(); document.body.style.overflow='hidden';
+}
+function closeLb(){
+  lb.style.opacity='0';
+  setTimeout(()=>{ lb.classList.add('hidden'); lb.classList.remove('flex'); }, 320);
+  if(lenis) lenis.start(); document.body.style.overflow='';
+}
+document.getElementById('galleryGrid').addEventListener('click', e=>{
+  const f = e.target.closest('.g-item'); if(f) openLb(parseInt(f.dataset.i));
+});
+document.getElementById('lbClose').addEventListener('click', closeLb);
+document.getElementById('lbPrev').addEventListener('click', ()=> openLb(lbIndex-1));
+document.getElementById('lbNext').addEventListener('click', ()=> openLb(lbIndex+1));
+lb.addEventListener('click', e=>{ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown', e=>{
+  if(lb.classList.contains('hidden')) return;
+  if(e.key==='Escape') closeLb();
+  if(e.key==='ArrowLeft') openLb(lbIndex-1);
+  if(e.key==='ArrowRight') openLb(lbIndex+1);
+});
+
+/* ---------- Reviews ---------- */
+const REVIEWS = [
+  { name:'Ananya Deshpande', loc:'Pune', src:'Google Review', text:'The Misal Pav here is genuinely the best in the city — and the Puran Poli Cheesecake is genius. Warm service, candle-lit room, zero hurry. Basalt feels like a secret.' },
+  { name:'Rohan Iyer', loc:'Mumbai', src:'Google Review', text:'Hosted my sister\u2019s reception here for 180 guests. The vegetarian thali left every guest asking for the recipe. Flawless coordination from start to finish.' },
+  { name:'Meera Kulkarni', loc:'Pune', src:'Google Review', text:'Catered our corporate annual day for 300 people. Live counters, impeccable timing, and the team was invisible until you needed them. Extraordinary.' },
+  { name:'Aditya & Shreya', loc:'Pune', src:'Google Review', text:'Celebrated our anniversary at Basalt — surprise dessert, handwritten note, and the Saffron Sunset mocktail. They don\u2019t just serve food, they curate moments.' },
+  { name:'Vikram Joshi', loc:'Delhi', src:'Google Review', text:'A fully vegetarian menu that never once feels like a compromise. The sushi platter and wood-fired pizza are as good as any restaurant I\u2019ve had in Tokyo or Naples.' }
+];
+const revWrap = document.getElementById('reviewWrap');
+const revDots = document.getElementById('revDots');
+revWrap.innerHTML = REVIEWS.map(r=>`
+  <div class="review-slide flex flex-col items-center justify-center">
+    <div class="flex gap-1 mb-5">${'<svg width="17" height="17" viewBox="0 0 24 24" fill="#B08D57"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>'.repeat(5)}</div>
+    <p class="font-serif text-xl md:text-2xl leading-relaxed text-ink">"${r.text}"</p>
+    <div class="mt-6 text-sm tracking-[.18em] uppercase text-stone">${r.name} · ${r.loc}</div>
+    <div class="text-[.62rem] tracking-[.3em] uppercase text-gold mt-1">${r.src}</div>
+  </div>`).join('');
+revDots.innerHTML = REVIEWS.map((_,i)=>`<span class="review-dot ${i===0?'active':''}" data-i="${i}"></span>`).join('');
+let revI = 0, revTimer;
+function showReview(i){
+  revI = (i+REVIEWS.length)%REVIEWS.length;
+  document.querySelectorAll('.review-slide').forEach((s,x)=> s.classList.toggle('active', x===revI));
+  document.querySelectorAll('.review-dot').forEach((d,x)=> d.classList.toggle('active', x===revI));
+}
+function resetRevTimer(){ clearInterval(revTimer); revTimer = setInterval(()=> showReview(revI+1), 6000); }
+document.getElementById('revPrev').addEventListener('click', ()=>{ showReview(revI-1); resetRevTimer(); });
+document.getElementById('revNext').addEventListener('click', ()=>{ showReview(revI+1); resetRevTimer(); });
+revDots.addEventListener('click', e=>{ const d=e.target.closest('.review-dot'); if(d){ showReview(parseInt(d.dataset.i)); resetRevTimer(); }});
+revWrap.addEventListener('mouseenter', ()=> clearInterval(revTimer));
+revWrap.addEventListener('mouseleave', resetRevTimer);
+showReview(0); resetRevTimer();
+
+/* ---------- Instagram ---------- */
+const IG = [
+  ['https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=600&auto=format&fit=crop','Veg biryani night'],
+  ['https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=600&auto=format&fit=crop','Sushi at Basalt'],
+  ['https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600&auto=format&fit=crop','Dessert hour'],
+  ['https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=600&auto=format&fit=crop','Tandoor evenings'],
+  ['https://images.unsplash.com/photo-1522992319-0365e5f11656?q=80&w=600&auto=format&fit=crop','Latte art mornings'],
+  ['https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600&auto=format&fit=crop','Slow-simmered curries']
+];
+document.getElementById('igGrid').innerHTML = IG.map(g=>`
+  <a href="https://instagram.com/basalt_culinary_journey" target="_blank" rel="noopener" class="ig-item aspect-square bg-champagne">
+    <img src="${g[0]}" alt="${g[1]}" loading="lazy" class="w-full h-full object-cover">
+    <span class="ig-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FAF6EF" stroke-width="1.7"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="#FAF6EF" stroke="none"/></svg></span>
+  </a>`).join('');
+
+/* ---------- Marquee duplicate ---------- */
+const mc = document.getElementById('marqueeContent');
+mc.parentElement.appendChild(mc.cloneNode(true));
+
+/* ---------- Modals ---------- */
+const WA_NUM = '919876543210';
+function openModal(id){
+  const m = document.getElementById(id);
+  m.classList.remove('hidden');
+  if(lenis) lenis.stop(); document.body.style.overflow='hidden';
+  const card = m.querySelector('.modal-card');
+  card.style.animation='none'; void card.offsetWidth; card.style.animation='';
+  const preset = document.querySelector(`[data-open-modal="${id}"]`);
+  if(id==='modal-event' && preset && preset.dataset.preset){
+    const sel = document.getElementById('e-type');
+    [...sel.options].forEach(o=>{ o.selected = (o.text===preset.dataset.preset); });
+  }
+}
+function closeModal(m){
+  m.classList.add('hidden');
+  if(lenis) lenis.start(); document.body.style.overflow='';
+}
+document.querySelectorAll('[data-open-modal]').forEach(b=> b.addEventListener('click', ()=> openModal(b.dataset.openModal)));
+document.querySelectorAll('[data-close-modal]').forEach(b=> b.addEventListener('click', e=> closeModal(e.target.closest('.modal'))));
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') document.querySelectorAll('.modal:not(.hidden)').forEach(closeModal); });
+
+/* ---------- Forms ---------- */
+const today = new Date().toISOString().split('T')[0];
+document.querySelectorAll('input[type="date"]').forEach(d=> d.min = today);
+
+/* populate time select */
+const timeSel = document.getElementById('r-time');
+['11:30 AM','12:00 PM','12:30 PM','01:00 PM','01:30 PM','02:00 PM','02:30 PM','07:00 PM','07:30 PM','08:00 PM','08:30 PM','09:00 PM','09:30 PM','10:00 PM'].forEach(t=>{
+  const o = document.createElement('option'); o.value=t; o.textContent=t; timeSel.appendChild(o);
+});
+
+const phoneOK = v => /^[6-9]\d{9}$/.test(v.replace(/\D/g,''));
+const emailOK = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+
+function validate(fields){
+  let ok = true;
+  fields.forEach(f=>{
+    const err = document.getElementById('e-'+f.id);
+    let valid = true;
+    const v = f.value.trim();
+    if(f.required && !v) valid = false;
+    else if(f.type==='tel' && !phoneOK(v)) valid = false;
+    else if(f.type==='email' && !emailOK(v)) valid = false;
+    f.classList.toggle('err', !valid);
+    if(err) err.style.display = valid ? 'none' : 'block';
+    if(!valid) ok = false;
+  });
+  return ok;
+}
+
+function setLoading(btn, on, label){
+  if(on){ btn.dataset.html = btn.innerHTML; btn.innerHTML = '<span class="spinner"></span> Sending…'; btn.disabled = true; }
+  else { btn.innerHTML = btn.dataset.html; btn.disabled = false; }
+}
+function refNo(){ return 'BSLT-' + Math.floor(100000 + Math.random()*900000); }
+function waLink(msg){ return 'https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(msg); }
+
+function wireForm(formId, btnId, sId, fields, buildMsg, fillSuccess){
+  const form = document.getElementById(formId);
+  const btn = document.getElementById(btnId);
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const inputs = fields.map(id=>document.getElementById(id));
+    if(!validate(inputs)) return;
+    setLoading(btn, true);
+    setTimeout(()=>{
+      setLoading(btn, false);
+      form.classList.add('hidden');
+      const s = document.getElementById(sId);
+      s.classList.remove('hidden');
+      fillSuccess();
+      const ref = refNo();
+      document.getElementById(sId.replace('success','sr')+'-ref') && null; // noop guard
+      const refEl = s.querySelector('[id$="-ref"]'); if(refEl) refEl.textContent = 'Ref: ' + ref;
+      const waEl = s.querySelector('[id$="-wa"]'); if(waEl) waEl.href = waLink(buildMsg() + '\n\nRef: ' + ref);
+    }, 1400);
+  });
+}
+
+wireForm('form-reserve','btn-reserve','success-reserve',
+  ['r-name','r-phone','r-email','r-date','r-time','r-guests'],
+  ()=> `Hello Basalt, table reservation request:
+Name: ${val('r-name')}
+Phone: ${val('r-phone')}
+Email: ${val('r-email')}
+Date: ${val('r-date')} · Time: ${val('r-time')}
+Guests: ${val('r-guests')}
+Special Request: ${val('r-req')||'—'}`,
+  ()=>{
+    document.getElementById('sr-name').textContent = val('r-name').split(' ')[0];
+    document.getElementById('sr-phone').textContent = val('r-phone');
+    document.getElementById('sr-detail').textContent = val('r-date') + ' at ' + val('r-time') + ' (' + val('r-guests') + ')';
+  });
+
+wireForm('form-event','btn-event','success-event',
+  ['e-name','e-phone','e-type','e-date','e-guests','e-req'],
+  ()=> `Hello Basalt, event enquiry:
+Name: ${val('e-name')}
+Phone: ${val('e-phone')}
+Event Type: ${val('e-type')}
+Date: ${val('e-date')}
+Guests: ${val('e-guests')}
+Venue: ${val('e-venue')||'—'}
+Budget: ${val('e-budget')||'—'}
+Requirements: ${val('e-req')}`,
+  ()=>{
+    document.getElementById('se-type').textContent = val('e-type');
+    document.getElementById('se-date').textContent = val('e-date');
+  });
+
+wireForm('form-catering','btn-catering','success-catering',
+  ['c-name','c-phone','c-type','c-date','c-guests','c-loc','c-req'],
+  ()=> `Hello Basalt, catering quote request:
+Name: ${val('c-name')}
+Phone: ${val('c-phone')}
+Event Type: ${val('c-type')}
+Date: ${val('c-date')}
+Guests: ${val('c-guests')}
+Location: ${val('c-loc')}
+Requirements: ${val('c-req')}`,
+  ()=>{
+    document.getElementById('sc-type').textContent = val('c-type');
+    document.getElementById('sc-date').textContent = val('c-date');
+  });
+
+function val(id){ return (document.getElementById(id).value||'').trim(); }
+
+/* live error clearing */
+document.querySelectorAll('.field').forEach(f=> f.addEventListener('input', ()=>{
+  f.classList.remove('err');
+  const err = document.getElementById('e-'+f.id); if(err) err.style.display='none';
+}));
+
+/* ---------- Footer year ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
